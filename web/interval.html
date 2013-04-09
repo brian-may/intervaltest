@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/interval.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var testCases = [];
+		testCases[0] = {
+				startDate : new Date(2001,00,01), 
+				endDate : new Date(2001,00,12),
+				intervalAmount : 1,
+				intervalField : 'd', 
+				offsetAmount : null, 
+				offsetField : null,
+				strict : true,
+				values : [['20010102',1],['20010103',2],['20010104',1],['20010106',3],['20010107',5]]
+		};
+		$(testCases).each(function(index,value) {
+			checkInterval(value);
+		});
+	});
+</script>
+</head>
+<body>
+<div id="output"></div>
+</body>
+</html>
